@@ -1,17 +1,22 @@
-﻿namespace CChavezStudentClassDemo
+﻿using StudentClassDemo;
+
+namespace StaticClassDemo
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             Student myStudent = new Student();
-            myStudent.SetMajor("Computer Programing");
+            myStudent.SetMajor("Computer Programming");
 
             Student myOtherStudent = new Student();
             myOtherStudent.SetMajor("Art History");
 
-            Console.WriteLine("My student's major is {0}.", myStudent.GetMajor);
-            Console.WriteLine("My other student's major is {0}.", myOtherStudent.GetMajor);
+            Console.WriteLine(myStudent.GetMajor());
+            Console.WriteLine(myOtherStudent.GetMajor());
+
+            Console.Write("Press any key to continue...");
+            Console.ReadKey();
         }
     }
 }
